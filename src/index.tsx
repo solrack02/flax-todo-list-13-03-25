@@ -2093,7 +2093,7 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
         'colors': jsvals.j8({pass: {
           propertieValues: { 
         "primaryColor": jsvals.j8({pass: {
-          propertieValues: "#147804"
+          propertieValues: "#FF0000"
         }}), 
         "txtGrey9": jsvals.j8({pass: {
           propertieValues: "#999"
