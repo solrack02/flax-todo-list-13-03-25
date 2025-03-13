@@ -91,8 +91,11 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           keyPath: [jsvals.j8({pass: {
           propertieValues: "sc.a0.forms.form1.name"
         }})],
-          value: jsvals.j8({pass: {
+          value: jsvals.argReader({pass: {
+          argPath: jsvals.j8({pass: {
           propertieValues: "#0"
+        }}),
+          args
         }})
         }})],
 
