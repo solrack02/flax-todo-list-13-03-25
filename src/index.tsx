@@ -55,7 +55,8 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
         }})
         }})] }})],
 
-          screenElements:[(...args:any) => <Elements.Text pass={{
+          screenElements:[
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             {}
           ],
@@ -72,6 +73,30 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          editPath: [jsvals.j8({pass: {
+          propertieValues: "sc.a0.forms.form1.name"
+        }})],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [jsvals.j8({pass: {
+          propertieValues: "sc.a0.forms.form1.name"
+        }})],
+          value: jsvals.j8({pass: {
+          propertieValues: "#0"
+        }})
+        }})],
+
+          args,
         }}/>],
 
           startFunctions:[async (...args) =>
