@@ -106,15 +106,16 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           elementProperties: [{}],
 
           styles: [
-              {
-                backgroundColor: 'blue',
-                borderRadius: 20,
-                paddingVertical: 5,
-                paddingHorizontal: 20,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }
-              ],
+stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#040"
+        }})] }}), 
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100px"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "30px"
+        }})] }}), 
+stls.alignItems({ pass: { arrayValue: ['flex-start'] }}), stls.justifyContent({ pass: { arrayValue: ['center'] }})],
 
           childrenItems: [(...args:any) => <Elements.Text pass={{
           arrProps: [
