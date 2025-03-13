@@ -27,7 +27,7 @@ export { Screen3 } from './Screen3';
 // export { IptTxtMaskRG } from './IptTxt2';
 
 // export { IptTxt2 } from './IptTxt2';
-// export { IptTxtEdit } from './IptTxtEdit';
+export { IptTxtEdit } from './IptTxtEdit';
 
 export { ImageBox } from './ImageBox';
 export { Text } from './Text';
