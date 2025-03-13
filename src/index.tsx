@@ -140,12 +140,30 @@ stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
 
         }}/>],
 
-          pressableFunctions: [()=>console.log("Você Clicou!")],
+          pressableFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [jsvals.j8({pass: {
+          propertieValues: "sc.a0.lists.list1"
+        }})],
+          value: jsvals.j8({pass: {
+          propertieValues: [jsvals.j8({pass: {
+          propertieValues: "Teste1"
+        }})]
+        }})
+        }})],
 
           args,
-        }}/>, (...args:any) => <Elements.Watcher pass={{variable: [jsvals.j8({pass: {
-          propertieValues: "sc.a0.forms.form1.todo"
-        }})],childrenItems: [(...args:any) => <Elements.Text pass={{
+        }}/>, (...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: jsvals.j8({pass: {
+          propertieValues: "sc.a0.lists.list1"
+        }}),
+
+          itemElements: [
+            (...args:any) => <Elements.Text pass={{
           arrProps: [
             {}
           ],
@@ -155,16 +173,21 @@ stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
           ],
 
           children: [
-            jsvals.varReader({pass: {
-          path: jsvals.j8({pass: {
-          propertieValues: "sc.a0.forms.form1.todo"
-        }})
+            jsvals.argReader({pass: {
+          argPath: jsvals.j8({pass: {
+          propertieValues: "#0.item"
+        }}),
+          args
         }})
           ],
 
           args,
 
-        }}/>],arrFuncs: [() => {}],args,}}/>],
+        }}/>
+          ],
+
+          args,
+        }}/>],
 
           startFunctions:[async (...args) =>
         functions.firebase.fireInit({ args, pass:{
