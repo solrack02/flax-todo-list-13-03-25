@@ -115,7 +115,11 @@ stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
 stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
           propertieValues: "30px"
         }})] }}), 
-stls.alignItems({ pass: { arrayValue: ['flex-start'] }}), stls.justifyContent({ pass: { arrayValue: ['center'] }})],
+stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }}), stls.justifyContent({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
 
           childrenItems: [(...args:any) => <Elements.Text pass={{
           arrProps: [
