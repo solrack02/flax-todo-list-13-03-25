@@ -2461,7 +2461,8 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
         }})}
         }}) ]
         }}) }
-        }}), 'fbConfig': jsvals.j8({pass: {
+        }}), 
+        'fbConfig': jsvals.j8({pass: {
           propertieValues: { 
         "apiKey": jsvals.j8({pass: {
           propertieValues: "AIzaSyDjAfyEUADq7EaRyFWlGFjP1Eoox9LJHgI"
@@ -2480,6 +2481,11 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
         }}), "appId": jsvals.j8({pass: {
           propertieValues: "1:750912250366:web:4629eac789a718a74220af"
         }}) }
+        }}), 
+        'no name': jsvals.j8({pass: {
+          propertieValues: {   }
+        }}), 'no name': jsvals.j8({pass: {
+          propertieValues: {   }
         }}) }
         }})
           });
@@ -2487,7 +2493,13 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           // console.log(initObj);
 
           const arrInitFuncs = [
-            ()=>{}
+            async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [jsvals.j8({pass: {
+          propertieValues: "sc.a0.lists.list1"
+        }})],
+          value: ['lista vazia']
+        }})
           ];
 
           export const useRoutes = create(() => ({ currRoute }));
