@@ -140,12 +140,43 @@ stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
 
         }}/>],
 
-          pressableFunctions: [async (...args) =>
+          pressableFunctions: [
+        async (...args) =>
         functions.arrayPush({ args, pass:{
           oldArr: "sc.a0.lists.list1",
           newValue: "sc.a0.forms.form1.todo",
           passToFuncs: [false],
-        }})],
+        }}), (...args) => {
+          // ---------- set Capsules Inputs
+          const itemsToLog = [jsvals.varReader({pass: {
+          path: jsvals.j8({pass: {
+          propertieValues: "sc.a0"
+        }})
+        }})];
+
+          // ---------- set Console Log
+          itemsToLog.forEach(item=>{
+
+            if(typeof item === "function") return console.log({
+              function: item,
+              response: item(args)
+            });
+
+            if(typeof item === "string") {
+              // ---------- set Arguments Values (If Exists)
+              const checkArgs = item.startsWith('#');
+              if(checkArgs) item = tools.argSel(args, item);
+
+              // ---------- set Variables Values (If Exists)
+              const [condVar, varValue] = tools.getVarValue(item, "noComponent");
+              if(condVar) item = varValue;
+
+              return console.log(item);
+            }
+
+            console.log(item);
+          })
+        }],
 
           args,
         }}/>, (...args:any) => <Elements.FlatList2 pass={{
