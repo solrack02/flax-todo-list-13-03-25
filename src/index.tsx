@@ -55,52 +55,20 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
         }})
         }})] }})],
 
-          screenElements:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            {}
-          ],
+          screenElements:[() => {
+                  const textStyle = {
+                    fontSize: 20,
+                    color: '#fff2',
+                    textAlign:'center',
+                    maxWidth: 200,
+                    // maxWidth: '200px'<= #ATTENTION: Native ERROR! No string!
+                  };
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            jsvals.j8({pass: {
-          propertieValues: "Lista de Tarefas"
-        }})
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          editPath: [jsvals.j8({pass: {
-          propertieValues: "sc.a0.forms.form1.name"
-        }})],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [jsvals.j8({pass: {
-          propertieValues: "sc.a0.forms.form1.name"
-        }})],
-          value: jsvals.argReader({pass: {
-          argPath: jsvals.j8({pass: {
-          propertieValues: "#0"
-        }}),
-          args
-        }})
-        }})],
-
-          args,
-        }}/>],
+                  return (
+                    <RN.Text style={textStyle}>
+                      {'Adicione Elementos nessa tela!'}
+                    </RN.Text>);
+                }],
 
           startFunctions:[async (...args) =>
         functions.firebase.fireInit({ args, pass:{
@@ -2093,7 +2061,7 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
         'colors': jsvals.j8({pass: {
           propertieValues: { 
         "primaryColor": jsvals.j8({pass: {
-          propertieValues: "#CCC"
+          propertieValues: "#00FF00"
         }}), 
         "txtGrey9": jsvals.j8({pass: {
           propertieValues: "#999"
