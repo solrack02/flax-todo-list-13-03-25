@@ -83,12 +83,26 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          editPath: [" "],
+          editPath: [jsvals.j8({pass: {
+          propertieValues: "sc.a0.forms.form1.todo"
+        }})],
 
-          funcsArray: [() => {}],
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [jsvals.j8({pass: {
+          propertieValues: "sc.a0.forms.form1.todo"
+        }})],
+          value: jsvals.argReader({pass: {
+          argPath: jsvals.j8({pass: {
+          propertieValues: "#0"
+        }}),
+          args
+        }})
+        }})],
 
           args,
-        }}/>, (...args:any) => <Elements.Pressable3 pass={{
+        }}/>, 
+        (...args:any) => <Elements.Pressable3 pass={{
           elementProperties: [{}],
 
           styles: [
@@ -124,7 +138,28 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           pressableFunctions: [()=>console.log("Você Clicou!")],
 
           args,
-        }}/>],
+        }}/>, (...args:any) => <Elements.Watcher pass={{variable: [jsvals.j8({pass: {
+          propertieValues: "sc.a0.forms.form1.todo"
+        }})],childrenItems: [(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            jsvals.varReader({pass: {
+          path: jsvals.j8({pass: {
+          propertieValues: "sc.a0.forms.form1.todo"
+        }})
+        }})
+          ],
+
+          args,
+
+        }}/>],arrFuncs: [() => {}],args,}}/>],
 
           startFunctions:[async (...args) =>
         functions.firebase.fireInit({ args, pass:{
