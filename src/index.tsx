@@ -140,7 +140,8 @@ stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
 
         }}/>],
 
-          pressableFunctions: [async (...args) =>
+          pressableFunctions: [
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [jsvals.j8({pass: {
           propertieValues: "sc.a0.lists.list1"
@@ -150,6 +151,11 @@ stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
           propertieValues: "Teste1"
         }})]
         }})
+        }}), async (...args) =>
+        functions.arrayPush({ args, pass:{
+          oldArr: "sc.a0.lists.list1",
+          newValue: "sc.a0.forms.form1.todo",
+          passToFuncs: [false],
         }})],
 
           args,
