@@ -140,8 +140,7 @@ stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
 
         }}/>],
 
-          pressableFunctions: [
-        (...args) => {
+          pressableFunctions: [(...args) => {
           // ---------- set Capsules Inputs
           const itemsToLog = [jsvals.varReader({pass: {
           path: jsvals.j8({pass: {
@@ -171,12 +170,7 @@ stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
 
             console.log(item);
           })
-        }, async (...args) =>
-        functions.arrayPush({ args, pass:{
-          oldArr: "sc.a0.lists.list1",
-          newValue: "sc.a0.forms.form1.todo",
-          passToFuncs: [false],
-        }})],
+        }],
 
           args,
         }}/>, (...args:any) => <Elements.FlatList2 pass={{
